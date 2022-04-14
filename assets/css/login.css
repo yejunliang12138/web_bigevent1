@@ -1,55 +1,67 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: url('/assets/images/login_bg.jpg') no-repeat center;
-  background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/login_bg.jpg') no-repeat center;
+    /* 填充模式 */
+    background-size: cover;
 }
 
 .loginAndRegBox {
-  width: 400px;
-  height: 310px;
-  background-color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    /* 添加定位 */
+    position: absolute;
+    /* 左上都走多了，需要减去自身宽度的百分之50，用transform */
+    left: 50%;
+    top: 50%;
+    /* 这样就居中对齐了 */
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 310px;
+    background-color: pink;
 }
 
 .title-box {
-  height: 60px;
-  background: url('/assets/images/login_title.png') no-repeat center;
+    height: 60px;
+    background: url('/assets/images/login_title.png') no-repeat center;
 }
 
 .reg-box {
-  display: none;
+    /* 先隐藏，因为要先显示去注册的账号，后面要根据需求再来调用 */
+    display: none;
 }
 
 .layui-form {
-  padding: 0 30px;
+    padding: 0 30px;
 }
 
 .links {
-  display: flex;
-  justify-content: flex-end;
+    /* css3的布局 */
+    display: flex;
+    justify-content: flex-end;
 }
 
 .links a {
-  font-size: 12px;
+    font-size: 12px;
 }
 
+
+/* 利用子绝父相的定位，把用户和密码的图标定位到输入框里面 */
+
 .layui-form-item {
-  position: relative;
+    position: relative;
 }
 
 .layui-icon {
-  position: absolute;
-  left: 10px;
-  top: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
+
+/* 给输入框添加一个padding-left属性挤一挤 */
+
 .layui-input {
-  padding-left: 32px;
+    padding-left: 35px;
 }
